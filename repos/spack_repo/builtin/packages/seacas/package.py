@@ -360,7 +360,7 @@ class Seacas(CMakePackage):
                 ]
             )
             if "+fortran" in spec:
-                options.append(define("CMAKE_Fortran_COMPILER", spec["mpi"].mpifc)) 
+                options.append(define("CMAKE_Fortran_COMPILER", spec["mpi"].mpifc))
 
         # ########## What applications should be built #############
         # Check whether they want everything; if so, do the easy way...
