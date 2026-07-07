@@ -3,7 +3,6 @@
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
 import shutil
-import sys
 
 from spack_repo.builtin.build_systems.generic import Package
 
