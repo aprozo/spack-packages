@@ -25,7 +25,7 @@ class PyCodechecker(PythonPackage):
 
     depends_on("py-setuptools@70.2.0:", type="build")
 
-    depends_on("llvm +clang", type=("build", "run"))
+    depends_on("llvm +libclang", type=("build", "run"))
     depends_on("gcc@13:", type=("build", "run"))
     depends_on("cppcheck@1.80:", type=("build", "run"))
 

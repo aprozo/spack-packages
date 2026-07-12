@@ -36,10 +36,10 @@ class Saltfm(CMakePackage):
 
     depends_on("cmake@3.23:", type="build")
 
-    depends_on("llvm+clang+flang@19", type=("build", "link", "run"), when="@:0.3.0")
+    depends_on("llvm+libclang+flang@19", type=("build", "link", "run"), when="@:0.3.0")
 
-    depends_on("llvm@19:22 +clang", type=("build", "link", "run"), when="@0.4.0:")
-    depends_on("llvm@19:22 +clang", type=("build", "link", "run"), when="@master")
+    depends_on("llvm@19:22 +libclang", type=("build", "link", "run"), when="@0.4.0:")
+    depends_on("llvm@19:22 +libclang", type=("build", "link", "run"), when="@master")
 
     with when("+flang"):
         depends_on("llvm +flang", type=("build", "link", "run"))

@@ -34,7 +34,7 @@ class Open3d(CMakePackage, CudaPackage):
     depends_on("cmake@3.19:", type="build")
     # https://github.com/isl-org/Open3D/issues/3762
     # https://github.com/isl-org/Open3D/issues/4570
-    depends_on("llvm@7:+clang")
+    depends_on("llvm@7:+libclang")
     depends_on("eigen")
     depends_on("flann")
     # https://github.com/isl-org/Open3D/issues/4360

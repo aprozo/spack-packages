@@ -78,7 +78,7 @@ class TreeSitter(MakefilePackage):
 
         # tree-sitter-cli depends on rust-bindgen, which needs libclang (transitive dependency)
         # https://github.com/rust-lang/rust-bindgen/blob/main/book/src/requirements.md#clang
-        depends_on("llvm@9: +clang", type="build")
+        depends_on("llvm@9: +libclang", type="build")
 
     patch(
         "https://github.com/tree-sitter/tree-sitter/pull/5226.patch?full_index=1",

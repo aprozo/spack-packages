@@ -57,7 +57,7 @@ class Pocl(CMakePackage):
     depends_on("libtool", type="link", when="@:1.3")  # links against libltdl
     depends_on("pkgconfig", type="build")
 
-    depends_on("llvm +clang")
+    depends_on("llvm +libclang")
     # PoCL aims to support **the latest LLVM version** at the time of PoCL release,
     # **plus the previous** LLVM version
     depends_on("llvm @18:19", when="@master")

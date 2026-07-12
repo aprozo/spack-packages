@@ -24,7 +24,7 @@ class Barvinok(AutotoolsPackage):
 
     depends_on("gmp")
     depends_on("ntl")
-    depends_on("llvm +clang", when="+pet")
+    depends_on("llvm +libclang", when="+pet")
     depends_on("libyaml", when="+pet")
 
     def setup_build_environment(self, env: EnvironmentModifications) -> None:

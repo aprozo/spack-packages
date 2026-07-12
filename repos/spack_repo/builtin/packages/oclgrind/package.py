@@ -24,4 +24,4 @@ class Oclgrind(CMakePackage):
     depends_on("c", type="build")  # generated
     depends_on("cxx", type="build")  # generated
 
-    depends_on("llvm +clang @5.0:")
+    depends_on("llvm +libclang @5.0:")

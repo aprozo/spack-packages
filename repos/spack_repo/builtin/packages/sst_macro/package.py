@@ -64,7 +64,7 @@ class SstMacro(AutotoolsPackage):
     depends_on("binutils", type="build")
     depends_on("zlib-api", type=("build", "link"))
     depends_on("otf2", when="+otf2")
-    depends_on("llvm+clang@5:9", when="+skeletonizer")
+    depends_on("llvm+libclang@5:9", when="+skeletonizer")
     depends_on("mpi", when="+pdes_mpi")
     # Allow mismatch between core dependency version and current macro version.
     depends_on("sst-core", when="+core")

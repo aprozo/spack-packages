@@ -62,7 +62,7 @@ class QtTools(QtPackage):
     depends_on("c", type="build")
     depends_on("cxx", type="build")
 
-    depends_on("llvm +clang", when="+qdoc")
+    depends_on("llvm +libclang", when="+qdoc")
 
     depends_on("qt-base +network")
     depends_on("qt-base +widgets", when="+designer")

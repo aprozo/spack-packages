@@ -48,7 +48,7 @@ class PyPyside2(PythonPackage):
 
     depends_on("cmake@3.1:", type="build")
     # clang >= 16 doesn't work, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=270715#c6
-    depends_on("llvm@10:15 +clang", type="build", when="@5.15")
+    depends_on("llvm@10:15 +libclang", type="build", when="@5.15")
     depends_on("py-setuptools", type="build")
     depends_on("py-packaging", type="build")
     depends_on("py-wheel", type="build")

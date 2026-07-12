@@ -29,7 +29,7 @@ class GenerateNinja(Package):
 
     depends_on("ninja")
     depends_on("python", type="build")
-    depends_on("llvm+clang", type="build")
+    depends_on("llvm+libclang", type="build")
 
     def setup_build_environment(self, env: EnvironmentModifications) -> None:
         env.set("DEPLOY", "1")

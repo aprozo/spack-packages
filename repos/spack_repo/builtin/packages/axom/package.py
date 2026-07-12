@@ -300,7 +300,7 @@ class Axom(CachedCMakePackage, CudaPackage, ROCmPackage):
 
         # Need clang@19 for clang-format
         # (ENABLE_CLANGFORMAT will be OFF if not the exact version)
-        depends_on("llvm+clang@19", type="build")
+        depends_on("llvm+libclang@19", type="build")
 
     # Component requirements
     # -----------------------------------------------------------------------

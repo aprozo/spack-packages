@@ -72,13 +72,13 @@ class Proteus(CMakePackage, CudaPackage, ROCmPackage):
 
     # Proteus LLVM and Clang dependencies.
     # CUDA enabled.
-    depends_on("llvm@18:20 +clang targets=all", when="+cuda")
+    depends_on("llvm@18:20 +libclang targets=all", when="+cuda")
 
     # ROCm enabled, use the AMDGPU LLVM build.
     depends_on("llvm-amdgpu@6.2:", when="+rocm")
 
     # Host-only (no CUDA or HIP).
-    depends_on("llvm@18:20+clang", when="~rocm ~cuda")
+    depends_on("llvm@18:20+libclang", when="~rocm ~cuda")
 
     requires("%[virtuals=c,cxx] llvm-amdgpu", when="+rocm")
     requires("%[virtuals=c,cxx] llvm", when="+cuda")

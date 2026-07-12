@@ -35,7 +35,7 @@ class PyLibclang(PythonPackage):
     depends_on("py-setuptools", type="build")
 
     for ver in ["9", "10", "11", "13", "14", "15", "16", "17", "18"]:
-        depends_on("llvm+clang@" + ver, when="@" + ver, type="build")
+        depends_on("llvm+libclang@" + ver, when="@" + ver, type="build")
 
     def patch(self):
         if self.version >= Version("14"):

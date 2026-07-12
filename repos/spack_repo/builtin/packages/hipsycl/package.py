@@ -45,8 +45,8 @@ class Hipsycl(CMakePackage, ROCmPackage):
     depends_on("boost +filesystem", when="@:0.8")
     depends_on("boost@1.67.0:1.69.0 +filesystem +fiber +context cxxstd=17", when="@0.9.1:")
     depends_on("python@3:")
-    depends_on("llvm@8: +clang", when="~cuda")
-    depends_on("llvm@9: +clang", when="+cuda")
+    depends_on("llvm@8: +libclang", when="~cuda")
+    depends_on("llvm@9: +libclang", when="+cuda")
 
     # hipSYCL 0.8.0 supported only LLVM 8-10:
     # (https://github.com/AdaptiveCpp/AdaptiveCpp/blob/v0.8.0/CMakeLists.txt#L29-L37)

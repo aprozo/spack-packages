@@ -293,7 +293,7 @@ class Libpressio(CMakePackage, CudaPackage):
     depends_on("openssl", when="+openssl")
     depends_on("py-pybind11", when="+pybind")
     depends_on("matio+shared@1.5.17:", when="+matio")
-    depends_on("llvm@17: +clang", when="+clang")
+    depends_on("llvm@17: +libclang", when="+clang")
     conflicts(
         "^ mgard@compat-2022-11-18",
         when="@:0.88.3+mgard",

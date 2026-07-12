@@ -23,7 +23,7 @@ class Rtags(CMakePackage):
     depends_on("c", type="build")  # generated
     depends_on("cxx", type="build")  # generated
 
-    depends_on("llvm@3.3: +clang")
+    depends_on("llvm@3.3: +libclang")
     depends_on("zlib-api")
     depends_on("openssl")
     depends_on("lua@5.3:")
