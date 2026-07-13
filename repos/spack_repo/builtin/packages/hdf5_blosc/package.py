@@ -68,7 +68,12 @@ class Hdf5Blosc(Package):
                 "-L%s" % spec["hdf5"].prefix.lib,
                 "-lhdf5",
             )
-            libtool("--mode=install", "cp", "libblosc_filter.la", join_path(plugins_dir, "libblosc_filter.la"))
+            libtool(
+                "--mode=install",
+                "cp",
+                "libblosc_filter.la",
+                join_path(plugins_dir, "libblosc_filter.la"),
+            )
 
             # Build and install plugin
             # The plugin requires at least HDF5 1.8.11:
@@ -92,7 +97,12 @@ class Hdf5Blosc(Package):
                     "-L%s" % spec["hdf5"].prefix.lib,
                     "-lhdf5",
                 )
-                libtool("--mode=install", "cp", "libblosc_plugin.la", join_path(plugins_dir, "libblosc_plugin.la"))
+                libtool(
+                    "--mode=install",
+                    "cp",
+                    "libblosc_plugin.la",
+                    join_path(plugins_dir, "libblosc_plugin.la"),
+                )
 
         if self.run_tests:
             self.check_install(spec)
