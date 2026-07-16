@@ -112,13 +112,6 @@ class Libtool(AutotoolsPackage, GNUMirrorPackage):
         )
 
     def _disable_fortran_if_absent(self, env: EnvironmentModifications) -> None:
-        # When no Fortran compiler is available, Spack unsets F77/FC, but
-        # libtool's configure then finds the compiler-wrapper's f77/f95 stubs
-        # (always on PATH, dispatching to a nonexistent Fortran compiler) and
-        # tries to configure a Fortran tag anyway. That failing probe disables
-        # shared-library support in the *default* section of the installed
-        # standalone `libtool` (build_libtool_libs=no), which silently breaks
-        # every package that uses it to build shared libraries
         # Setting the "no" sentinel makes libtool's configure skip
         # the F77/FC tags entirely, so the C toolchain's shared-library support
         # is preserved.
